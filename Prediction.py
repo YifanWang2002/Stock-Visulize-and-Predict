@@ -14,7 +14,7 @@ import streamlit as st
 
 from alpha_vantage.timeseries import TimeSeries 
 
-API_KEY = st.secrets["api_key"]
+API_KEY = st.secrets["API_KEY"]
 
 def load_data_from_api(ticker):
     ts = TimeSeries(key=API_KEY)

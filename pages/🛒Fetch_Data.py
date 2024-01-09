@@ -664,7 +664,7 @@ if st.button("Fetch Data"):
         st.write("We already have that data, please find a new one")
     else:
         if ticker_search is not None:
-            url = f"https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol={ticker_search}&outputsize=full&apikey=THC8MN9LWLTOS5HK&datatype=csv"
+            url = f"https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol={ticker_search}&outputsize=full&apikey={st.secrets['API_KEY']}&datatype=csv"
             response = requests.get(url)
             if response.status_code == 200:
 
